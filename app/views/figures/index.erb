@@ -1,0 +1,11 @@
+<h2 style="margin-bottom: 0px">List of Figures</h2>
+<a href="figures/new">Create New Figure</a>
+
+<% @figures.each do |figure| %>
+  <%= "<p style='margin-bottom: 0px; font-weight: bold'><a href='/figures/#{figure.id}'>#{figure.name}</a></p>" %>
+  <ul>
+    <% figure.titles.each do |title| %>
+      <li><%= title.name %></li>
+    <% end %>
+  </ul>
+<% end %>

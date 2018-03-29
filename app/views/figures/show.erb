@@ -1,0 +1,16 @@
+<h2 style="margin-bottom: 0px"><%= @figure.name %></h2>
+<%="<a href='/figures/#{@figure.id}/edit'>Edit Figure</a>"%>
+
+<p style="margin-bottom: 0px; font-weight: bold">Landmarks:</p>
+<ul>
+  <% @figure.landmarks.each do |landmark| %>
+    <li><%= landmark.name %></li>
+  <% end %>
+</ul>
+
+<p style="margin-bottom: 0px; font-weight: bold">Titles:</p>
+<ul>
+  <% @figure.titles.each do |title| %>
+    <li><%= title.name %></li>
+  <% end %>
+</ul>

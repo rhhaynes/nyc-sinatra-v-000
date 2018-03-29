@@ -1,0 +1,8 @@
+<h2 style="margin-bottom: 0px">List of Landmarks</h2>
+<a href="landmarks/new">Create New Landmark</a>
+
+<ul>
+  <% @landmarks.sort_by{|landmark| landmark.year_completed}.each do |landmark| %>
+    <li><%= "#{landmark.year_completed}: " %>&nbsp;<%= "<a href='/landmarks/#{landmark.id}'>#{landmark.name}</a>" %></li>
+  <% end %>
+</ul>
